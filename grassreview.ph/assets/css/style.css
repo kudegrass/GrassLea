@@ -1,3 +1,6 @@
+/* Import Inter Font - Clean, modern, highly readable */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,46 +8,50 @@
   scroll-behavior: smooth;
 }
 
-/* Smooth font rendering */
+/* Use Inter as primary font */
 body {
-  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #f5fbf5, #e8f5e8);
   color: #2c3e2e;
   line-height: 1.7;
   transition: background 0.4s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header with soft gradient */
+/* Header with larger, bold typography */
 header {
   background: linear-gradient(135deg, #2c3e2e, #3a5a3b);
   color: white;
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: -1px;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 header p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  max-width: 600px;
+  font-size: 1.3rem;
+  opacity: 0.95;
+  max-width: 720px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
-/* Navigation with soft hover */
+/* Navigation with Inter and spacing */
 nav {
   background: #4a6b4c;
   text-align: center;
-  padding: 0.8rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -52,23 +59,23 @@ nav {
 
 nav a {
   color: white;
-  margin: 0 1.2rem;
+  margin: 0 1.6rem;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   position: relative;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
 }
 
 nav a:after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 2.5px;
   bottom: 0;
   left: 50%;
   background: #a8d8a0;
-  transition: width 0.3s ease, left 0.3s ease;
+  transition: 0.35s ease;
 }
 
 nav a:hover:after {
@@ -76,48 +83,97 @@ nav a:hover:after {
   left: 15%;
 }
 
-/* Card Grid with breathing space */
-section {
-  margin: 3rem 0;
-  padding: 0 1.2rem;
+/* Main container with max-width and centering */
+main {
+  flex: 1;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
+/* Section styling with larger headings */
+section {
+  margin: 4rem 0;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #2c3e2e;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+section h2::before,
+section h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 70px;
+  height: 1.5px;
+  background: #a8d8a0;
+  transform: translateY(-50%);
+}
+
+section h2::before {
+  left: -85px;
+}
+section h2::after {
+  right: -85px;
+}
+
+/* Card Grid - Equal Height & Width */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
 }
 
-/* Cards with depth and soft hover */
+/* Uniform Cards - Same Size & Height */
 .card {
   background: white;
   border: 1px solid #d8e8db;
-  padding: 1.6rem 1.4rem;
+  padding: 2rem 1.6rem;
   text-align: center;
-  border-radius: 14px;
+  border-radius: 16px;
   text-decoration: none;
   color: #2c3e2e;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
+  transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
   backdrop-filter: blur(4px);
   position: relative;
   overflow: hidden;
+  min-height: 220px; /* Uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  font-size: 1.15rem; /* Larger text */
+  text-transform: none;
+  white-space: normal;
+  line-height: 1.5;
+  border-top: 6px solid transparent;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  border-color: #a8d8a0;
-}
-
+/* Gradient top bar on hover */
 .card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 6px;
   background: linear-gradient(90deg, #4a6b4c, #a8d8a0);
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -127,97 +183,123 @@ section {
   opacity: 1;
 }
 
-.card h3, .card strong {
-  color: #2c3e2e;
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  border-color: #a8d8a0;
 }
 
-/* Questions styling */
+/* Icons/Typography inside cards */
+.card strong {
+  font-size: 1.2rem;
+  color: #2c3e2e;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* Question styling - uniform and readable */
 .question {
   background: white;
-  padding: 1.3rem;
-  margin-bottom: 1.2rem;
-  border-radius: 12px;
+  padding: 1.6rem;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
   border: 1px solid #e6f0e6;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.question:hover {
-  border-color: #a8d8a0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .question p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 
 label {
   display: block;
-  padding: 0.5rem 0.3rem;
-  margin: 0.3rem 0;
+  padding: 0.7rem 0.5rem;
+  margin: 0.5rem 0;
   cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 label:hover {
   background: #f0f8f0;
-  padding-left: 1rem;
+  transform: translateX(6px);
+  font-weight: 600;
+  color: #1e2b1f;
 }
 
-/* Result box */
+/* Result box - larger, centered, professional */
 #result {
-  margin: 2.5rem 0;
-  padding: 2rem 1.8rem;
+  margin: 3rem auto;
+  padding: 2.5rem 2.2rem;
   background: linear-gradient(135deg, #e8f5e8, #f0faf0);
-  border-radius: 14px;
-  font-size: 1.25rem;
+  border-radius: 18px;
+  font-size: 1.4rem;
   text-align: center;
   display: none;
-  border: 1px solid #d0e8d0;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  animation: fadeIn 0.6s ease;
+  border: 1px solid #c8e0c8;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  max-width: 640px;
+  line-height: 1.7;
+  animation: fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Buttons */
+/* Button - larger, bolder */
 button {
-  padding: 0.9rem 1.8rem;
-  font-size: 1.05rem;
+  padding: 1.1rem 2.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   background: linear-gradient(135deg, #2c3e2e, #3a5a3b);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
   letter-spacing: 0.5px;
+  display: block;
+  margin: 2rem auto;
+  min-width: 240px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
 }
 
 button:hover {
   background: linear-gradient(135deg, #1e2b1f, #2c3e2e);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
   transform: translateY(0);
 }
 
-/* Footer */
+/* Footer - refined with larger text */
 footer {
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   background: linear-gradient(135deg, #2c3e2e, #1e2b1f);
   color: #d0e8d0;
-  margin-top: 3rem;
-  font-size: 0.95rem;
+  margin-top: auto;
+  font-size: 1.05rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 footer a {
@@ -230,23 +312,69 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive tweak for small screens */
-@media (max-width: 600px) {
+/* Responsive: Mobile & Tablet */
+@media (max-width: 768px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1.15rem;
   }
   nav a {
-    margin: 0 0.8rem;
-    font-size: 0.95rem;
+    margin: 0 1rem;
+    font-size: 1.05rem;
+  }
+  section h2 {
+    font-size: 1.8rem;
+  }
+  section h2::before,
+  section h2::after {
+    width: 50px;
+    left: -65px;
+    right: -65px;
   }
   .card-grid {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 1.6rem;
+    padding: 0 0.6rem;
+  }
+  .card {
+    min-height: 200px;
+    padding: 1.8rem 1.4rem;
+    font-size: 1.1rem;
   }
   button {
-    width: 100%;
-    max-width: 300px;
-    margin: 1rem auto;
-    display: block;
+    width: 90%;
+    max-width: 340px;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+  #result {
+    margin: 2.8rem 1.2rem;
+    padding: 2.2rem 1.8rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 2.5rem 1rem;
+  }
+  header h1 {
+    font-size: 1.9rem;
+  }
+  header p {
+    font-size: 1.05rem;
+  }
+  section h2 {
+    font-size: 1.6rem;
+  }
+  .card {
+    min-height: 190px;
+    padding: 1.6rem 1.2rem;
+    font-size: 1.05rem;
+  }
+  .card strong {
+    font-size: 1.1rem;
   }
 }
