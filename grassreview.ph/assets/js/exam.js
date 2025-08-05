@@ -1,5 +1,5 @@
 function submitExam() {
-  const form = document.currentForm;
+  const form = document.getElementById("examForm");
   let score = 0;
   const total = window.currentQuestions.length;
 
@@ -15,6 +15,6 @@ function submitExam() {
     <h3>🎉 Exam Complete!</h3>
     <p><strong>Score: ${score} / ${total}</strong></p>
     <p>Performance: ${percentage}%</p>
-    <p>${percentage >= 75 ? "✅ Excellent! You're on track." : "💡 Keep reviewing!"}</p>
+    <p>${percentage >= 75 ? "✅ You're on track!" : "💡 Keep reviewing!"}</p>
   `;
 }

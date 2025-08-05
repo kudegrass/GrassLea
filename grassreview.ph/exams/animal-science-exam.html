@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <header><h1>📝 Animal Science Mock Exam (100 Questions)</h1></header>
+  <header><h1>📝 Animal Science Mock Exam</h1></header>
   <nav><a href="../index.html">← Home</a></nav>
 
   <main>
@@ -21,10 +21,8 @@
   <script src="../assets/data/questions.js"></script>
   <script>
     window.currentQuestions = ExamQuestions.animalscience;
-    document.currentForm = document.getElementById("examForm");
     const questionsContainer = document.getElementById("questions");
 
-    // Render 100 questions
     window.currentQuestions.forEach((q, index) => {
       const qDiv = document.createElement("div");
       qDiv.className = "question";

@@ -7,60 +7,57 @@ body {
 }
 header {
   background: #2c3e2e;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 1.5rem;
 }
 header h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+nav {
   background: #3a5a3b;
+  text-align: center;
   padding: 0.7rem;
 }
 nav a {
   color: white;
-  margin: 0 1.2rem;
+  margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
 }
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   padding: 1.5rem;
 }
 .card {
-  background: #fff;
+  background: white;
   border: 1px solid #d0e0d0;
-  padding: 1.5rem;
+  padding: 1.3rem;
   text-align: center;
   border-radius: 10px;
   text-decoration: none;
   color: #2c3e2e;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s;
 }
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
 }
 section {
   margin: 2rem 0;
+  padding: 0 1rem;
 }
 footer {
   text-align: center;
   padding: 1.5rem;
   background: #2c3e2e;
-  color: #fff;
+  color: white;
   margin-top: 2rem;
 }
-/* Exam Styles */
 .question {
-  background: #fff;
+  background: white;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
@@ -83,9 +80,7 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin: 1rem 0;
 }
 button:hover {
   background: #1e2b1f;
 }
-footer a { color: #a0d0a0; }
