@@ -1,86 +1,252 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f2f8f2;
-  color: #2c3e2e;
-  line-height: 1.6;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
+
+/* Smooth font rendering */
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5fbf5, #e8f5e8);
+  color: #2c3e2e;
+  line-height: 1.7;
+  transition: background 0.4s ease;
+}
+
+/* Header with soft gradient */
 header {
-  background: #2c3e2e;
+  background: linear-gradient(135deg, #2c3e2e, #3a5a3b);
   color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Navigation with soft hover */
 nav {
-  background: #3a5a3b;
+  background: #4a6b4c;
   text-align: center;
-  padding: 0.7rem;
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 nav a {
   color: white;
-  margin: 0 1rem;
+  margin: 0 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  position: relative;
+  padding: 0.2rem 0;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: #a8d8a0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover:after {
+  width: 70%;
+  left: 15%;
+}
+
+/* Card Grid with breathing space */
+section {
+  margin: 3rem 0;
+  padding: 0 1.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Cards with depth and soft hover */
+.card {
+  background: white;
+  border: 1px solid #d8e8db;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #2c3e2e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #a8d8a0;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4a6b4c, #a8d8a0);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card h3, .card strong {
+  color: #2c3e2e;
+}
+
+/* Questions styling */
+.question {
+  background: white;
+  padding: 1.3rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #e6f0e6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.question:hover {
+  border-color: #a8d8a0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question p {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  padding: 0.5rem 0.3rem;
+  margin: 0.3rem 0;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+label:hover {
+  background: #f0f8f0;
+  padding-left: 1rem;
+}
+
+/* Result box */
+#result {
+  margin: 2.5rem 0;
+  padding: 2rem 1.8rem;
+  background: linear-gradient(135deg, #e8f5e8, #f0faf0);
+  border-radius: 14px;
+  font-size: 1.25rem;
+  text-align: center;
+  display: none;
+  border: 1px solid #d0e8d0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+button {
+  padding: 0.9rem 1.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2c3e2e, #3a5a3b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e2b1f, #2c3e2e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #2c3e2e, #1e2b1f);
+  color: #d0e8d0;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #a8d8a0;
   text-decoration: none;
   font-weight: 500;
 }
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1.5rem;
+
+footer a:hover {
+  text-decoration: underline;
 }
-.card {
-  background: white;
-  border: 1px solid #d0e0d0;
-  padding: 1.3rem;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #2c3e2e;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-section {
-  margin: 2rem 0;
-  padding: 0 1rem;
-}
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #2c3e2e;
-  color: white;
-  margin-top: 2rem;
-}
-.question {
-  background: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-}
-#result {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: #e8f5e8;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  text-align: center;
-  display: none;
-}
-button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  background: #2c3e2e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-button:hover {
-  background: #1e2b1f;
+
+/* Responsive tweak for small screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  nav a {
+    margin: 0 0.8rem;
+    font-size: 0.95rem;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  button {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+    display: block;
+  }
 }
