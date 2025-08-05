@@ -1,4 +1,4 @@
-/* Import Inter Font - Clean, modern, highly readable */
+/* Import Inter Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
@@ -8,7 +8,6 @@
   scroll-behavior: smooth;
 }
 
-/* Use Inter as primary font */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #f5fbf5, #e8f5e8);
@@ -20,14 +19,12 @@ body {
   flex-direction: column;
 }
 
-/* Header with larger, bold typography */
 header {
   background: linear-gradient(135deg, #2c3e2e, #3a5a3b);
   color: white;
   text-align: center;
   padding: 3rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 header h1 {
@@ -35,7 +32,6 @@ header h1 {
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 0.8rem;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 header p {
@@ -43,15 +39,13 @@ header p {
   opacity: 0.95;
   max-width: 720px;
   margin: 0 auto;
-  font-weight: 500;
 }
 
-/* Navigation with Inter and spacing */
 nav {
   background: #4a6b4c;
   text-align: center;
   padding: 1rem 0;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.14);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -83,7 +77,6 @@ nav a:hover:after {
   left: 15%;
 }
 
-/* Main container with max-width and centering */
 main {
   flex: 1;
   padding: 0 1rem;
@@ -92,7 +85,6 @@ main {
   width: 100%;
 }
 
-/* Section styling with larger headings */
 section {
   margin: 4rem 0;
   padding: 0 1.2rem;
@@ -120,14 +112,9 @@ section h2::after {
   transform: translateY(-50%);
 }
 
-section h2::before {
-  left: -85px;
-}
-section h2::after {
-  right: -85px;
-}
+section h2::before { left: -85px; }
+section h2::after { right: -85px; }
 
-/* Card Grid - Equal Height & Width */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -138,7 +125,6 @@ section h2::after {
   justify-items: center;
 }
 
-/* Uniform Cards - Same Size & Height */
 .card {
   background: white;
   border: 1px solid #d8e8db;
@@ -147,26 +133,21 @@ section h2::after {
   border-radius: 16px;
   text-decoration: none;
   color: #2c3e2e;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
-  transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.09);
+  transition: all 0.45s cubic-bezier(0.25,0.8,0.25,1);
   backdrop-filter: blur(4px);
   position: relative;
   overflow: hidden;
-  min-height: 220px; /* Uniform height */
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  letter-spacing: -0.2px;
-  font-size: 1.15rem; /* Larger text */
-  text-transform: none;
-  white-space: normal;
+  font-size: 1.15rem;
   line-height: 1.5;
-  border-top: 6px solid transparent;
 }
 
-/* Gradient top bar on hover */
 .card::before {
   content: '';
   position: absolute;
@@ -185,62 +166,9 @@ section h2::after {
 
 .card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
-  border-color: #a8d8a0;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.2);
 }
 
-/* Icons/Typography inside cards */
-.card strong {
-  font-size: 1.2rem;
-  color: #2c3e2e;
-  margin-bottom: 0.4rem;
-  display: block;
-}
-
-/* Question styling - uniform and readable */
-.question {
-  background: white;
-  padding: 1.6rem;
-  margin-bottom: 1.5rem;
-  border-radius: 16px;
-  border: 1px solid #e6f0e6;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.35s ease;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.question p {
-  margin-bottom: 1rem;
-  font-weight: 500;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-label {
-  display: block;
-  padding: 0.7rem 0.5rem;
-  margin: 0.5rem 0;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-  font-size: 1.05rem;
-  font-weight: 500;
-}
-
-label:hover {
-  background: #f0f8f0;
-  transform: translateX(6px);
-  font-weight: 600;
-  color: #1e2b1f;
-}
-
-/* Result box - larger, centered, professional */
 #result {
   margin: 3rem auto;
   padding: 2.5rem 2.2rem;
@@ -250,9 +178,8 @@ label:hover {
   text-align: center;
   display: none;
   border: 1px solid #c8e0c8;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
   max-width: 640px;
-  line-height: 1.7;
   animation: fadeIn 0.8s ease;
 }
 
@@ -261,7 +188,6 @@ label:hover {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Button - larger, bolder */
 button {
   padding: 1.1rem 2.3rem;
   font-size: 1.2rem;
@@ -271,27 +197,21 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   transition: all 0.4s ease;
   letter-spacing: 0.5px;
   display: block;
   margin: 2rem auto;
   min-width: 240px;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
 }
 
 button:hover {
   background: linear-gradient(135deg, #1e2b1f, #2c3e2e);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
-button:active {
-  transform: translateY(0);
-}
-
-/* Footer - refined with larger text */
 footer {
   text-align: center;
   padding: 2.5rem 1.5rem;
@@ -299,45 +219,83 @@ footer {
   color: #d0e8d0;
   margin-top: auto;
   font-size: 1.05rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-footer a {
-  color: #a8d8a0;
-  text-decoration: none;
+/* Login & Settings Specific */
+.form-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e2e;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
   font-weight: 500;
+  color: #2c3e2e;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Responsive: Mobile & Tablet */
+.form-group input:focus {
+  border-color: #4a6b4c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 107, 76, 0.2);
+}
+
+.dashboard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: left;
+}
+
+.dashboard h3 {
+  color: #2c3e2e;
+  margin-bottom: 1rem;
+}
+
+.dashboard p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.settings-option {
+  margin: 1.5rem 0;
+}
+
+.settings-option label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-  header p {
-    font-size: 1.15rem;
-  }
-  nav a {
-    margin: 0 1rem;
-    font-size: 1.05rem;
-  }
-  section h2 {
-    font-size: 1.8rem;
-  }
-  section h2::before,
-  section h2::after {
-    width: 50px;
-    left: -65px;
-    right: -65px;
-  }
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-    padding: 0 0.6rem;
-  }
   .card {
     min-height: 200px;
     padding: 1.8rem 1.4rem;
@@ -348,33 +306,5 @@ footer a:hover {
     max-width: 340px;
     font-size: 1.1rem;
     padding: 1rem 2rem;
-  }
-  #result {
-    margin: 2.8rem 1.2rem;
-    padding: 2.2rem 1.8rem;
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 2.5rem 1rem;
-  }
-  header h1 {
-    font-size: 1.9rem;
-  }
-  header p {
-    font-size: 1.05rem;
-  }
-  section h2 {
-    font-size: 1.6rem;
-  }
-  .card {
-    min-height: 190px;
-    padding: 1.6rem 1.2rem;
-    font-size: 1.05rem;
-  }
-  .card strong {
-    font-size: 1.1rem;
   }
 }

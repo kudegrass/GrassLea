@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - GrassReview.ph</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📊 GrassReview.ph</h1>
+    <p>User Dashboard</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="settings.html">Settings</a>
+    <a href="#" onclick="app.logout()">Logout</a>
+  </nav>
+
+  <main>
+    <div class="dashboard">
+      <h3>Hello, <span id="user-greeting">User</span>!</h3>
+      <p>You have completed 3 mock exams.</p>
+      <p>Last Exam: Crop Science - 85/100</p>
+      <p>Next Goal: Soil Science Exam</p>
+      <a href="exams/soil-science-exam.html" class="card">Continue Review →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GrassReview.ph | Track your progress</p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

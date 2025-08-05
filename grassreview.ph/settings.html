@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings - GrassReview.ph</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>⚙️ GrassReview.ph</h1>
+    <p>User Settings & Preferences</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="#" onclick="app.logout()">Logout</a>
+  </nav>
+
+  <main>
+    <div class="dashboard">
+      <h3>📝 Exam Preferences</h3>
+      <div class="settings-option">
+        <label for="show-tips">Show Study Tips</label>
+        <input type="checkbox" id="show-tips" />
+      </div>
+      <div class="settings-option">
+        <label for="difficulty">Difficulty Level</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <button onclick="app.saveSettings()">Save Settings</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GrassReview.ph | Customize your review</p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
