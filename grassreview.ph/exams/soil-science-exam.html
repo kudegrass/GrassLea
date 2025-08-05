@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soil Science Exam - GrassReview.ph</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header><h1>📝 Soil Science Mock Exam (100 Questions)</h1></header>
+  <nav><a href="../index.html">← Home</a></nav>
+
+  <main>
+    <form id="examForm">
+      <div id="questions"></div>
+      <button type="button" onclick="submitExam()">Submit Exam</button>
+    </form>
+    <div id="result"></div>
+  </main>
+
+  <script src="../assets/data/questions.js"></script>
+  <script>
+    window.currentQuestions = ExamQuestions.soilscience;
+    document.currentForm = document.getElementById("examForm");
+    const questionsContainer = document.getElementById("questions");
+
+    // Render 100 questions
+    window.currentQuestions.forEach((q, index) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.innerHTML = `
+        <p><strong>${index + 1}.</strong> ${q.question}</p>
+        <label><input type="radio" name="q${index}" value="a"> A) ${q.choices[0]}</label><br>
+        <label><input type="radio" name="q${index}" value="b"> B) ${q.choices[1]}</label><br>
+        <label><input type="radio" name="q${index}" value="c"> C) ${q.choices[2]}</label><br>
+        <label><input type="radio" name="q${index}" value="d"> D) ${q.choices[3]}</label><br><br>
+      `;
+      questionsContainer.appendChild(qDiv);
+    });
+  </script>
+  <script src="../assets/js/exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f8f2;
+  color: #2c3e2e;
+  line-height: 1.6;
+}
+header {
+  background: #2c3e2e;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+header h1 {
+  font-size: 2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #3a5a3b;
+  padding: 0.7rem;
+}
+nav a {
+  color: white;
+  margin: 0 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #d0e0d0;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #2c3e2e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+section {
+  margin: 2rem 0;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #2c3e2e;
+  color: #fff;
+  margin-top: 2rem;
+}
+/* Exam Styles */
+.question {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+#result {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #e8f5e8;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+}
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: #2c3e2e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+button:hover {
+  background: #1e2b1f;
+}
+footer a { color: #a0d0a0; }
