@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crop Science Exam - GrassReview.ph</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header><h1>📝 Crop Science Exam</h1></header>
+  <nav><a href="/">← Home</a></nav>
+
+  <main>
+    <form id="examForm" onsubmit="submitExam(); return false;">
+      <input type="hidden" name="username" value="student" />
+      <input type="hidden" name="subject" value="Crop Science" />
+      <input type="hidden" name="total" value="10" />
+      <div class="question">
+        <p><strong>1.</strong> What is the scientific name of rice?</p>
+        <label><input type="radio" name="q0" value="a"> A) Zea mays</label><br>
+        <label><input type="radio" name="q0" value="b"> B) Oryza sativa</label><br>
+      </div>
+      <div class="question">
+        <p><strong>2.</strong> Which is a C4 plant?</p>
+        <label><input type="radio" name="q1" value="a"> A) Rice</label><br>
+        <label><input type="radio" name="q1" value="c"> C) Corn</label><br>
+      </div>
+      <button type="submit">Submit Exam</button>
+    </form>
+    <div id="result"></div>
+  </main>
+
+  <footer><p>&copy; 2025 GrassReview.ph</p></footer>
+  <script src="../assets/js/exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "grassreview.ph",
+  "version": "1.0.0",
+  "description": "Agriculturist Licensure Review Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.6.0",
+    "body-parser": "^1.20.2"
+  },
+  "keywords": [
+    "agriculture",
+    "review",
+    "exam"
+  ],
+  "author": "You",
+  "license": "MIT"
+}

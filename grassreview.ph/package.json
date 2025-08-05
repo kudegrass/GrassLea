@@ -1,16 +1,15 @@
 {
   "name": "grassreview.ph",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Agriculturist Licensure Review Website",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["agriculture", "review", "exam"],
+  "author": "You",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "mongoose": "^8.17.0"
   }
